@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .rect{
+            background-color: red;
+            width: 70px;
+            height: 100px;
+            transform: skew(-20deg);
+            margin: 50px;
+            border-radius: 10px 0px;
+        }
+        .rect::before{
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 10px;
+            /* background-color: blue; */
+            z-index: 1;
+            bottom: 0;
+            left: -20px;
+            border-bottom-right-radius: 10px;
+            box-shadow: 10px 0px red;
+        }
+        .rect::after{
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 10px;
+            /* background-color: blue; */
+            z-index: 1;
+            left: 100%;
+            border-top-left-radius: 10px;
+            box-shadow: -10px 0px red;
+        }
+        .two{
+            transform: skew(20deg) rotateX(180deg);
+            background-color: darkred;
+            position: relative;
+            top: -150px;
+            left: 50px;
+            z-index: -1;
+        }
+        .two::before{
+            box-shadow: 10px 0px darkred;
+        }
+        .two::after{
+            box-shadow: -10px 0px darkred;
+        }
+        .card2{
+            position: relative;
+            left:-60px;
+        }
+        .card3{
+            position: relative;
+            left:-120px;
+        }
+        .card4{
+            position: relative;
+            left:-180px;
+        }
+        .card5{
+            position: relative;
+            left:-240px;
+        }
+        .card6{
+            position: relative;
+            left: -300px;
+        }
+        .all{
+            display: flex;
+        }
+        .card6 .rect{
+            border-radius: 0px 0px 10px 0px;
+        }
+        .card6 .rect::after{
+            content: none;
+        }
+        .tri{
+            width: 90px;
+            height: 30px;
+            background-color: red;
+            position: relative;
+            top: -180px;
+            left: 62px;
+            transform: skew(-20deg);
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+    <div class="card1">
+        <div class="rect"></div>
+        <div class="rect two"></div>
+    </div>
+    <div class="card2">
+        <div class="rect"></div>
+        <div class="rect two"></div>
+    </div>
+    <div class="card3">
+        <div class="rect"></div>
+        <div class="rect two"></div>
+    </div>
+    <div class="card4">
+        <div class="rect"></div>
+        <div class="rect two"></div>
+    </div>
+    <div class="card5">
+        <div class="rect"></div>
+        <div class="rect two"></div>
+    </div>
+    <div class="card6">
+        <div class="rect"></div>
+        <div class="tri"></div>
+    </div>
+    <div class="arrow"></div>
+    </div>
+</body>
+</html>
