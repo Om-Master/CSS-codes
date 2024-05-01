@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish_Cards</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .contain{
+            min-height: 100vh;
+            min-width: 100vw;
+            background: linear-gradient(to bottom, rgb(180, 180, 255), rgb(255, 187, 199));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 30px;
+        }
+        .box{
+            width: 220px;
+            height: 300px;
+            border-radius: 15px;
+            box-shadow: 5px 5px 30px rgb(69, 69, 69);
+            position: relative;
+        }
+        .num{
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            background: linear-gradient(45deg, rgb(69, 208, 0), rgb(30, 79, 255), rgb(255, 53, 205));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 100px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: rgb(255, 255, 255);
+            font-weight: 900;
+            position: absolute;
+            bottom: 0;
+            transition: all 0.5s;
+        }
+        .nu{
+            text-shadow: 1px 1px 5px rgb(0, 0, 0);
+        }
+        .inside{
+            padding-left: 10px;
+            padding-right: 10px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 15px;
+            background-color: black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .in{
+            font-size: large;
+        }
+        .in2{
+            font-size: small;
+            margin-top: 15px;
+        }
+        .box1 .in{
+            color: rgb(255, 255, 0);
+        }
+        .box2 .in{
+            color: rgb(0, 217, 255);
+        }
+        .box3 .in{
+            color: rgb(106, 255, 0);
+        }
+        .box2 .in2{
+            color: rgb(99, 226, 255);
+        }
+        .box1 .in2{
+            color: rgb(255, 255, 75);
+        }
+        .box3 .in2{
+            color: rgb(71, 255, 71);
+        }
+        .box:hover .num{
+           height: 50px;
+           font-size: 30px;
+           transition:all 0.5s; 
+        }
+        @keyframes animate {
+            from{
+                height: 300px;
+                top: 0px;
+            }
+            to{
+                height: 30px;
+                top: 270px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contain">
+        <div class="box box1">
+            <div class="num">
+                <div class="nu">01</div>
+            </div>
+            <div class="inside">
+                <div class="in">Java</div>
+                <div class="in2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio repellendus doloribus laboriosam consequatur ab. Inventore dicta iusto officia facere nihil.</div>
+            </div>
+        </div>
+        <div class="box box2">
+            <div class="num">
+                <div class="nu">02</div>
+            </div>
+            <div class="inside">
+                <div class="in">Python</div>
+                <div class="in2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla quam magnam amet suscipit quasi atque illo illum eius pariatur enim.</div>
+            </div>
+        </div>
+        <div class="box box3">
+            <div class="num">
+                <div class="nu">03</div>
+            </div>
+            <div class="inside">
+                <div class="in">Javascript</div>
+                <div class="in2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ut eum atque consectetur voluptatum, numquam reprehenderit odio eos quis similique.</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
